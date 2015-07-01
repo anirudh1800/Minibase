@@ -1,0 +1,138 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Available	Replacer.java	/^  public static final int Available = 12;$/;"	f	class:Replacer
+BINPATH	Makefile	/^BINPATH = $(JDKPATH)\/bin$/;"	m
+BufHTEntry	BufMgr.java	/^class BufHTEntry {$/;"	c
+BufHashTbl	BufMgr.java	/^  public BufHashTbl()$/;"	m	class:BufHashTbl
+BufHashTbl	BufMgr.java	/^class BufHashTbl implements GlobalConst{$/;"	c
+BufMgr	BufMgr.java	/^  public BufMgr( int numbufs, String replacerArg )$/;"	m	class:BufMgr
+BufMgr	BufMgr.java	/^public class BufMgr implements GlobalConst{$/;"	c
+BufMgrException	BufMgrException.java	/^  public BufMgrException(Exception e, String name)$/;"	m	class:BufMgrException
+BufMgrException	BufMgrException.java	/^public class BufMgrException extends ChainException{$/;"	c
+BufferPoolExceededException	BufferPoolExceededException.java	/^  public BufferPoolExceededException(Exception e, String name)$/;"	m	class:BufferPoolExceededException
+BufferPoolExceededException	BufferPoolExceededException.java	/^public class BufferPoolExceededException extends ChainException{$/;"	c
+CLASSPATH	Makefile	/^CLASSPATH = $(JDKPATH)\/lib\/classes.zip:.:..:$(LIBPATH)$/;"	m
+Clock	BufMgr.java	/^  public Clock(BufMgr javamgr)$/;"	m	class:Clock
+Clock	BufMgr.java	/^class Clock extends Replacer {$/;"	c
+FrameDesc	BufMgr.java	/^  public FrameDesc() {$/;"	m	class:FrameDesc
+FrameDesc	BufMgr.java	/^class FrameDesc implements GlobalConst{$/;"	c
+HTSIZE	BufMgr.java	/^  private static final int HTSIZE = 20;   $/;"	f	class:BufHashTbl	file:
+HashEntryNotFoundException	HashEntryNotFoundException.java	/^  public HashEntryNotFoundException(Exception ex, String name)$/;"	m	class:HashEntryNotFoundException
+HashEntryNotFoundException	HashEntryNotFoundException.java	/^public class HashEntryNotFoundException extends ChainException{$/;"	c
+HashOperationException	HashOperationException.java	/^  public HashOperationException(Exception e, String name)$/;"	m	class:HashOperationException
+HashOperationException	HashOperationException.java	/^public class HashOperationException extends ChainException{$/;"	c
+InvalidBufferException	InvalidBufferException.java	/^  public InvalidBufferException(Exception e, String name)$/;"	m	class:InvalidBufferException
+InvalidBufferException	InvalidBufferException.java	/^public class InvalidBufferException extends ChainException{$/;"	c
+InvalidFrameNumberException	InvalidFrameNumberException.java	/^  public InvalidFrameNumberException(Exception e, String name)$/;"	m	class:InvalidFrameNumberException
+InvalidFrameNumberException	InvalidFrameNumberException.java	/^public class InvalidFrameNumberException extends ChainException{$/;"	c
+JAVA	Makefile	/^JAVA  = $(JDKPATH)\/bin\/java  -classpath $(CLASSPATH)$/;"	m
+JAVAC	Makefile	/^JAVAC = $(JDKPATH)\/bin\/javac -classpath $(CLASSPATH)$/;"	m
+JDKPATH	Makefile	/^JDKPATH = \/usr\/lib\/jvm\/java-8-oracle$/;"	m
+LIBPATH	Makefile	/^LIBPATH = ~\/Dropbox\/Shared\\Files\/Project\/minjava\/javaminibase\/construction$/;"	m
+LRU	LRU.java	/^    public LRU(BufMgr mgrArg)$/;"	m	class:LRU
+LRU	LRU.java	/^class LRU extends  Replacer {$/;"	c
+MRU	MRU.java	/^class MRU extends Replacer {$/;"	c
+MRU	MRU.java	/^public  MRU(BufMgr mgrArg)$/;"	m	class:MRU
+PROGS	Makefile	/^PROGS = together$/;"	m
+PageNotFoundException	PageNotFoundException.java	/^  public PageNotFoundException(Exception e, String name)$/;"	m	class:PageNotFoundException
+PageNotFoundException	PageNotFoundException.java	/^public class PageNotFoundException extends ChainException{$/;"	c
+PageNotReadException	PageNotReadException.java	/^  public PageNotReadException(Exception e, String name)$/;"	m	class:PageNotReadException
+PageNotReadException	PageNotReadException.java	/^public class PageNotReadException extends ChainException{$/;"	c
+PagePinnedException	PagePinnedException.java	/^  public PagePinnedException(Exception e, String name)$/;"	m	class:PagePinnedException
+PagePinnedException	PagePinnedException.java	/^public class PagePinnedException extends ChainException{$/;"	c
+PageUnpinnedException	PageUnpinnedException.java	/^  public PageUnpinnedException(Exception ex, String name)$/;"	m	class:PageUnpinnedException
+PageUnpinnedException	PageUnpinnedException.java	/^public class PageUnpinnedException extends ChainException{$/;"	c
+Pinned	Replacer.java	/^  public static final int Pinned = 14;  $/;"	f	class:Replacer
+Referenced	Replacer.java	/^  public static final int Referenced = 13;$/;"	f	class:Replacer
+Replacer	Replacer.java	/^  protected Replacer(BufMgr javamgr)$/;"	m	class:Replacer
+Replacer	Replacer.java	/^abstract class Replacer implements GlobalConst $/;"	c
+ReplacerException	ReplacerException.java	/^  public ReplacerException(Exception e, String name)$/;"	m	class:ReplacerException
+ReplacerException	ReplacerException.java	/^public class ReplacerException extends ChainException{$/;"	c
+STATE	Replacer.java	/^  class STATE {$/;"	c
+allocate_page	BufMgr.java	/^  private void allocate_page (PageId pageno, int num)$/;"	m	class:BufMgr	file:
+bmhashdisplay	BufMgr.java	/^  private void bmhashdisplay()$/;"	m	class:BufMgr	file:
+bufPool	BufMgr.java	/^  private byte[][] bufPool;  \/\/ default = byte[NUMBUF][MAX_SPACE];$/;"	f	class:BufMgr	file:
+bufmgr	BufMgr.java	/^package bufmgr;$/;"	p
+bufmgr	BufMgrException.java	/^package bufmgr;$/;"	p
+bufmgr	BufferPoolExceededException.java	/^package bufmgr;$/;"	p
+bufmgr	HashEntryNotFoundException.java	/^package bufmgr;$/;"	p
+bufmgr	HashOperationException.java	/^package bufmgr;$/;"	p
+bufmgr	InvalidBufferException.java	/^package bufmgr;$/;"	p
+bufmgr	InvalidFrameNumberException.java	/^package bufmgr;$/;"	p
+bufmgr	LRU.java	/^package bufmgr;$/;"	p
+bufmgr	MRU.java	/^package bufmgr;$/;"	p
+bufmgr	PageNotFoundException.java	/^package bufmgr;$/;"	p
+bufmgr	PageNotReadException.java	/^package bufmgr;$/;"	p
+bufmgr	PagePinnedException.java	/^package bufmgr;$/;"	p
+bufmgr	PageUnpinnedException.java	/^package bufmgr;$/;"	p
+bufmgr	Replacer.java	/^package bufmgr;$/;"	p
+bufmgr	ReplacerException.java	/^package bufmgr;$/;"	p
+deallocate_page	BufMgr.java	/^  private void deallocate_page (PageId pageno)$/;"	m	class:BufMgr	file:
+dirty	BufMgr.java	/^  public boolean dirty;     $/;"	f	class:FrameDesc
+display	BufMgr.java	/^  public void display() {$/;"	m	class:BufHashTbl
+flushAllPages	BufMgr.java	/^  public void flushAllPages()$/;"	m	class:BufMgr
+flushPage	BufMgr.java	/^  public void flushPage(PageId pageid)$/;"	m	class:BufMgr
+frameNo	BufMgr.java	/^  public int frameNo;  $/;"	f	class:BufHTEntry
+frameTable	BufMgr.java	/^  public   FrameDesc[] frameTable() { return frmeTable; }$/;"	m	class:BufMgr
+frame_num	BufMgr.java	/^  public int frame_num;$/;"	f	class:victim_data
+frames	LRU.java	/^    private int  frames[];$/;"	f	class:LRU	file:
+frames	MRU.java	/^ private int frames[];$/;"	f	class:MRU	file:
+free	Replacer.java	/^  public void free( int frameNo ) throws PagePinnedException$/;"	m	class:Replacer
+freePage	BufMgr.java	/^  public void freePage(PageId globalPageId) $/;"	m	class:BufMgr
+frmeTable	BufMgr.java	/^  private FrameDesc[] frmeTable;  \/\/ default = new FrameDesc[NUMBUF];$/;"	f	class:BufMgr	file:
+getNumBuffers	BufMgr.java	/^  public int getNumBuffers() { return numBuffers; }$/;"	m	class:BufMgr
+getNumUnpinnedBuffers	BufMgr.java	/^  public int getNumUnpinnedBuffers()$/;"	m	class:BufMgr
+getNumUnpinnedBuffers	Replacer.java	/^  public int getNumUnpinnedBuffers()$/;"	m	class:Replacer
+hash	BufMgr.java	/^  private int hash(PageId pageNo)$/;"	m	class:BufHashTbl	file:
+hashTable	BufMgr.java	/^  private BufHashTbl hashTable = new BufHashTbl(); $/;"	f	class:BufMgr	file:
+head	Replacer.java	/^  protected int head;            $/;"	f	class:Replacer
+ht	BufMgr.java	/^  private BufHTEntry ht[] = new BufHTEntry[HTSIZE];       $/;"	f	class:BufHashTbl	file:
+info	BufMgr.java	/^  public void info()$/;"	m	class:Clock
+info	LRU.java	/^ public void info()$/;"	m	class:LRU
+info	MRU.java	/^ public  void info()$/;"	m	class:MRU
+info	Replacer.java	/^  public void info()$/;"	m	class:Replacer
+insert	BufMgr.java	/^  public boolean insert(PageId pageNo, int frameNo)$/;"	m	class:BufHashTbl
+lookup	BufMgr.java	/^  public int lookup(PageId pageNo)$/;"	m	class:BufHashTbl
+mgr	Replacer.java	/^  protected BufMgr mgr;$/;"	f	class:Replacer
+name	BufMgr.java	/^  public final String name() { return "Clock"; }$/;"	m	class:Clock
+name	LRU.java	/^    public String name() { return "LRU"; }$/;"	m	class:LRU
+name	MRU.java	/^   public String name() { return "MRU"; }$/;"	m	class:MRU
+name	Replacer.java	/^  public abstract String name();$/;"	m	class:Replacer
+newPage	BufMgr.java	/^  public PageId newPage(Page firstpage, int howmany)$/;"	m	class:BufMgr
+next	BufMgr.java	/^  public BufHTEntry next;     $/;"	f	class:BufHTEntry
+nframes	LRU.java	/^  private int  nframes;$/;"	f	class:LRU	file:
+numBuffers	BufMgr.java	/^  private int  numBuffers;	$/;"	f	class:BufMgr	file:
+pageNo	BufMgr.java	/^  public PageId pageNo = new PageId(); $/;"	f	class:BufHTEntry
+pageNo	BufMgr.java	/^  public PageId pageNo;     $/;"	f	class:FrameDesc
+page_id	BufMgr.java	/^  public int page_id;$/;"	f	class:victim_data
+pick_victim	BufMgr.java	/^  public int pick_victim() $/;"	m	class:Clock
+pick_victim	LRU.java	/^ public int pick_victim()$/;"	m	class:LRU
+pick_victim	MRU.java	/^public int pick_victim()$/;"	m	class:MRU
+pick_victim	Replacer.java	/^  public abstract int pick_victim() throws BufferPoolExceededException, PagePinnedException;     $/;"	m	class:Replacer
+pin	BufMgr.java	/^  public int pin() { return(++pin_cnt); }$/;"	m	class:FrameDesc
+pin	LRU.java	/^ public void pin(int frameNo) throws InvalidFrameNumberException$/;"	m	class:LRU
+pin	MRU.java	/^public void pin(int frameNo) throws InvalidFrameNumberException$/;"	m	class:MRU
+pin	Replacer.java	/^  public void pin( int frameNo ) throws InvalidFrameNumberException $/;"	m	class:Replacer
+pinPage	BufMgr.java	/^  public void pinPage(PageId pin_pgid, Page page, boolean emptyPage) $/;"	m	class:BufMgr
+pin_cnt	BufMgr.java	/^  public int pin_cnt;   $/;"	f	class:FrameDesc
+pin_count	BufMgr.java	/^  public int pin_count() { return(pin_cnt); }$/;"	m	class:FrameDesc
+privFlushPages	BufMgr.java	/^  private void privFlushPages(PageId pageid, int all_pages)$/;"	m	class:BufMgr	file:
+read_page	BufMgr.java	/^  private void read_page (PageId pageno, Page page)$/;"	m	class:BufMgr	file:
+remove	BufMgr.java	/^  public boolean remove(PageId pageNo)$/;"	m	class:BufHashTbl
+replacer	BufMgr.java	/^  private Replacer replacer;$/;"	f	class:BufMgr	file:
+setBufferManager	LRU.java	/^    public void setBufferManager( BufMgr mgr )$/;"	m	class:LRU
+setBufferManager	MRU.java	/^ public void setBufferManager( BufMgr mgr )$/;"	m	class:MRU
+setBufferManager	Replacer.java	/^  protected void setBufferManager( BufMgr mgrArg ) {$/;"	m	class:Replacer
+state	Replacer.java	/^    int state; $/;"	f	class:STATE
+state_bit	Replacer.java	/^  protected STATE state_bit[];$/;"	f	class:Replacer
+unpin	BufMgr.java	/^  public int unpin() {$/;"	m	class:FrameDesc
+unpin	Replacer.java	/^  public boolean unpin( int frameNo ) throws InvalidFrameNumberException, PageUnpinnedException$/;"	m	class:Replacer
+unpinPage	BufMgr.java	/^  public void unpinPage(PageId PageId_in_a_DB, boolean dirty) $/;"	m	class:BufMgr
+update	LRU.java	/^  private void update(int frameNo)$/;"	m	class:LRU	file:
+update	MRU.java	/^ private void update(int frameNo)$/;"	m	class:MRU	file:
+victim_data	BufMgr.java	/^class victim_data {$/;"	c
+write_page	BufMgr.java	/^  private void write_page (PageId pageno, Page page)$/;"	m	class:BufMgr	file:

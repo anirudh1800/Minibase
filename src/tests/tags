@@ -1,0 +1,345 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddtoList	QueryCheck.java	/^  void AddtoList(TupleList list, Tuple t) {        $/;"	m	class:QueryCheck
+BINPATH	Makefile	/^BINPATH = $(JDKPATH)\/bin$/;"	m
+BMDriver	BMTest.java	/^  public BMDriver () {$/;"	m	class:BMDriver
+BMDriver	BMTest.java	/^class BMDriver extends TestDriver implements GlobalConst {$/;"	c
+BMTest	BMTest.java	/^public class BMTest {$/;"	c
+BTDriver	BTTest.java	/^class BTDriver  implements GlobalConst$/;"	c
+BTTest	BTTest.java	/^public class BTTest implements  GlobalConst{$/;"	c
+Boats	JoinTest.java	/^  public Boats (int _bid, String _bname, String _color) {$/;"	m	class:Boats
+Boats	JoinTest.java	/^class Boats {$/;"	c
+Boats	SM_JoinTest.java	/^  public Boats (int _bid, String _bname, String _color) {$/;"	m	class:Boats
+Boats	SM_JoinTest.java	/^class Boats {$/;"	c
+CLASSPATH	Makefile	/^CLASSPATH = $(LIBPATH)$/;"	m
+CTSDriver	CTSTest.java	/^    public CTSDriver() {$/;"	m	class:CTSDriver
+CTSDriver	CTSTest.java	/^class CTSDriver extends TestDriver$/;"	c
+CTSTest	CTSTest.java	/^public class CTSTest$/;"	c
+Check	QueryCheck.java	/^  public void Check(Tuple t) {$/;"	m	class:QueryCheck
+ColaMarkets	CTSTest.java	/^    public ColaMarkets(int _marketId, String _name, Sdo_geometry _shape) {$/;"	m	class:ColaMarkets
+ColaMarkets	CTSTest.java	/^class ColaMarkets {$/;"	c
+ColaSpatialIdx	SpatialIndexTest.java	/^class ColaSpatialIdx{$/;"	c
+DBDriver	DBTest.java	/^  public DBDriver () {$/;"	m	class:DBDriver
+DBDriver	DBTest.java	/^class DBDriver extends TestDriver implements GlobalConst {$/;"	c
+DBTest	DBTest.java	/^public class DBTest {$/;"	c
+Disclaimer	CTSTest.java	/^    private void Disclaimer() {$/;"	m	class:CTSDriver	file:
+Disclaimer	ITSTest.java	/^    private void Disclaimer() {$/;"	m	class:ITSDriver	file:
+Disclaimer	JoinTest.java	/^  private void Disclaimer() {$/;"	m	class:JoinsDriver	file:
+Disclaimer	SM_JoinTest.java	/^  private void Disclaimer() {$/;"	m	class:JoinsDriver	file:
+Disclaimer	SpatialIndexTest.java	/^    private void Disclaimer() {$/;"	m	class:SpatialIndexDriver	file:
+DummyRecord	HFTest.java	/^  public DummyRecord (int _reclen) {$/;"	m	class:DummyRecord
+DummyRecord	HFTest.java	/^  public DummyRecord() {}$/;"	m	class:DummyRecord
+DummyRecord	HFTest.java	/^  public DummyRecord(Tuple _atuple) $/;"	m	class:DummyRecord
+DummyRecord	HFTest.java	/^  public DummyRecord(byte [] arecord) $/;"	m	class:DummyRecord
+DummyRecord	HFTest.java	/^class DummyRecord  {$/;"	c
+FAIL	BMTest.java	/^  private boolean FAIL = false;$/;"	f	class:BMDriver	file:
+FAIL	CTSTest.java	/^    private boolean FAIL = false;$/;"	f	class:CTSDriver	file:
+FAIL	DBTest.java	/^  private boolean FAIL = false;$/;"	f	class:DBDriver	file:
+FAIL	HFTest.java	/^  private final static boolean FAIL = false;$/;"	f	class:HFDriver	file:
+FAIL	ITSTest.java	/^    private boolean FAIL = false;$/;"	f	class:ITSDriver	file:
+FAIL	JoinTest.java	/^  private boolean FAIL = false;$/;"	f	class:JoinsDriver	file:
+FAIL	SM_JoinTest.java	/^  private boolean FAIL = false;$/;"	f	class:JoinsDriver	file:
+FAIL	SpatialIndexTest.java	/^    private boolean FAIL = false;$/;"	f	class:SpatialIndexDriver	file:
+FAIL	TestDriver.java	/^  public final static boolean FAIL = false; $/;"	f	class:TestDriver
+FALSE	BMTest.java	/^  private int FALSE = 0;$/;"	f	class:BMDriver	file:
+G_O_flag	QueryCheck.java	/^  private int      G_O_flag;     \/\/ error flag for group order wrong$/;"	f	class:QueryCheck	file:
+GetStuff	BTTest.java	/^  GetStuff() {}$/;"	m	class:GetStuff
+GetStuff	BTTest.java	/^class GetStuff {$/;"	c
+Group	QueryCheck.java	/^  public Group () {$/;"	m	class:Group
+Group	QueryCheck.java	/^class Group {$/;"	c
+HFDriver	HFTest.java	/^  public HFDriver () {$/;"	m	class:HFDriver
+HFDriver	HFTest.java	/^class HFDriver extends TestDriver implements GlobalConst$/;"	c
+HFTest	HFTest.java	/^public class HFTest {$/;"	c
+ITSDriver	ITSTest.java	/^    public ITSDriver() {$/;"	m	class:ITSDriver
+ITSDriver	ITSTest.java	/^class ITSDriver extends TestDriver$/;"	c
+ITSTest	ITSTest.java	/^public class ITSTest$/;"	c
+IndexDriver	IndexTest.java	/^  public IndexDriver() {$/;"	m	class:IndexDriver
+IndexDriver	IndexTest.java	/^class IndexDriver extends TestDriver $/;"	c
+IndexTest	IndexTest.java	/^public class IndexTest$/;"	c
+JAVA	Makefile	/^JAVA  = $(JDKPATH)\/bin\/java  -classpath $(CLASSPATH)$/;"	m
+JAVAC	Makefile	/^JAVAC = $(JDKPATH)\/bin\/javac -classpath $(CLASSPATH)$/;"	m
+JDKPATH	Makefile	/^JDKPATH = \/usr\/lib\/jvm\/java-8-oracle$/;"	m
+JoinTest	JoinTest.java	/^public class JoinTest$/;"	c
+JoinsDriver	JoinTest.java	/^  public JoinsDriver() {$/;"	m	class:JoinsDriver
+JoinsDriver	JoinTest.java	/^class JoinsDriver implements GlobalConst {$/;"	c
+JoinsDriver	SM_JoinTest.java	/^  public JoinsDriver() {$/;"	m	class:JoinsDriver
+JoinsDriver	SM_JoinTest.java	/^class JoinsDriver implements GlobalConst {$/;"	c
+LARGE	IndexTest.java	/^  private static int   LARGE = 1000; $/;"	f	class:IndexDriver	file:
+LARGE	SortTest.java	/^  private static int   LARGE = 1000; $/;"	f	class:SORTDriver	file:
+LIBPATH	Makefile	/^LIBPATH = .:..$/;"	m
+MarkTuple	QueryCheck.java	/^  void MarkTuple(int groupNum, int tupleNum) {$/;"	m	class:QueryCheck
+Max_answer	QueryCheck.java	/^  public static final int Max_answer = 15;$/;"	f	class:QueryCheck
+Max_answer	QueryCheck.java	/^  static int Max_answer = 15;$/;"	f	class:Group
+Max_group_num	QueryCheck.java	/^  public static final int Max_group_num = 5;$/;"	f	class:QueryCheck
+MisMatch	QueryCheck.java	/^  void MisMatch(Tuple t) {$/;"	m	class:QueryCheck
+NUM_RECORDS	IndexTest.java	/^  private static int   NUM_RECORDS = data2.length; $/;"	f	class:IndexDriver	file:
+NUM_RECORDS	SortTest.java	/^  private static int   NUM_RECORDS = data2.length; $/;"	f	class:SORTDriver	file:
+OK	BMTest.java	/^  private boolean OK = true;$/;"	f	class:BMDriver	file:
+OK	CTSTest.java	/^    private boolean OK = true;$/;"	f	class:CTSDriver	file:
+OK	DBTest.java	/^  private boolean OK = true;$/;"	f	class:DBDriver	file:
+OK	HFTest.java	/^  private final static boolean OK = true;$/;"	f	class:HFDriver	file:
+OK	ITSTest.java	/^    private boolean OK = true;$/;"	f	class:ITSDriver	file:
+OK	JoinTest.java	/^  private boolean OK = true;$/;"	f	class:JoinsDriver	file:
+OK	SM_JoinTest.java	/^  private boolean OK = true;$/;"	f	class:JoinsDriver	file:
+OK	SpatialIndexTest.java	/^    private boolean OK = true;$/;"	f	class:SpatialIndexDriver	file:
+OK	TestDriver.java	/^  public final static boolean OK   = true; $/;"	f	class:TestDriver
+Order	QueryCheck.java	/^  public Order(int _order) {$/;"	m	class:Order
+Order	QueryCheck.java	/^class Order {$/;"	c
+Q1result	QueryCheck.java	/^  Vector Q1result = new Vector();$/;"	f	class:QueryCheck
+Q2result	QueryCheck.java	/^  Vector Q2result = new Vector();$/;"	f	class:QueryCheck
+Q3result	QueryCheck.java	/^  Vector Q3result = new Vector();$/;"	f	class:QueryCheck
+Q4result	QueryCheck.java	/^  Vector Q4result = new Vector();$/;"	f	class:QueryCheck
+Q5result	QueryCheck.java	/^  Vector Q5result = new Vector();$/;"	f	class:QueryCheck
+Q6result	QueryCheck.java	/^  Vector Q6result = new Vector();$/;"	f	class:QueryCheck
+Q7result	QueryCheck.java	/^  Vector Q7result = new Vector();$/;"	f	class:QueryCheck
+Query1	JoinTest.java	/^  public void Query1() {$/;"	m	class:JoinsDriver
+Query1	SM_JoinTest.java	/^  public void Query1() {$/;"	m	class:JoinsDriver
+Query1_CondExpr	JoinTest.java	/^  private void Query1_CondExpr(CondExpr[] expr) {$/;"	m	class:JoinsDriver	file:
+Query1_CondExpr	SM_JoinTest.java	/^  private void Query1_CondExpr(CondExpr[] expr) {$/;"	m	class:JoinsDriver	file:
+Query2	JoinTest.java	/^  public void Query2() {$/;"	m	class:JoinsDriver
+Query2	SM_JoinTest.java	/^  public void Query2() {}$/;"	m	class:JoinsDriver
+Query2_CondExpr	JoinTest.java	/^  private void Query2_CondExpr(CondExpr[] expr, CondExpr[] expr2) {$/;"	m	class:JoinsDriver	file:
+Query2_CondExpr	SM_JoinTest.java	/^  private void Query2_CondExpr(CondExpr[] expr, CondExpr[] expr2) {$/;"	m	class:JoinsDriver	file:
+Query3	JoinTest.java	/^  public void Query3() {$/;"	m	class:JoinsDriver
+Query3	SM_JoinTest.java	/^   public void Query3() {$/;"	m	class:JoinsDriver
+Query3_CondExpr	JoinTest.java	/^  private void Query3_CondExpr(CondExpr[] expr) {$/;"	m	class:JoinsDriver	file:
+Query3_CondExpr	SM_JoinTest.java	/^  private void Query3_CondExpr(CondExpr[] expr) {$/;"	m	class:JoinsDriver	file:
+Query4	JoinTest.java	/^  public void Query4() {$/;"	m	class:JoinsDriver
+Query4	SM_JoinTest.java	/^   public void Query4() {$/;"	m	class:JoinsDriver
+Query5	JoinTest.java	/^  public void Query5() {$/;"	m	class:JoinsDriver
+Query5	SM_JoinTest.java	/^   public void Query5() {$/;"	m	class:JoinsDriver
+Query5_CondExpr	JoinTest.java	/^  private CondExpr[] Query5_CondExpr() {$/;"	m	class:JoinsDriver	file:
+Query5_CondExpr	SM_JoinTest.java	/^  private CondExpr[] Query5_CondExpr() {$/;"	m	class:JoinsDriver	file:
+Query6	JoinTest.java	/^  public void Query6()$/;"	m	class:JoinsDriver
+Query6	SM_JoinTest.java	/^  public void Query6(){}$/;"	m	class:JoinsDriver
+Query6_CondExpr	JoinTest.java	/^  private void Query6_CondExpr(CondExpr[] expr, CondExpr[] expr2) {$/;"	m	class:JoinsDriver	file:
+Query6_CondExpr	SM_JoinTest.java	/^  private void Query6_CondExpr(CondExpr[] expr, CondExpr[] expr2) {$/;"	m	class:JoinsDriver	file:
+QueryCheck	QueryCheck.java	/^  public QueryCheck(int q_index) {$/;"	m	class:QueryCheck
+QueryCheck	QueryCheck.java	/^public class QueryCheck {$/;"	c
+REC_LEN1	IndexTest.java	/^  private static short REC_LEN1 = 32; $/;"	f	class:IndexDriver	file:
+REC_LEN1	SortTest.java	/^  private static short REC_LEN1 = 32; $/;"	f	class:SORTDriver	file:
+REC_LEN2	IndexTest.java	/^  private static short REC_LEN2 = 160; $/;"	f	class:IndexDriver	file:
+REC_LEN2	SortTest.java	/^  private static short REC_LEN2 = 160; $/;"	f	class:SORTDriver	file:
+Reserves	JoinTest.java	/^  public Reserves (int _sid, int _bid, String _date) {$/;"	m	class:Reserves
+Reserves	JoinTest.java	/^class Reserves {$/;"	c
+Reserves	SM_JoinTest.java	/^  public Reserves (int _sid, int _bid, String _date) {$/;"	m	class:Reserves
+Reserves	SM_JoinTest.java	/^class Reserves {$/;"	c
+S1	QueryCheck.java	/^  public S1 (String _sname, String _date) {$/;"	m	class:S1
+S1	QueryCheck.java	/^class S1 {$/;"	c
+S2	QueryCheck.java	/^  public S2 (String _sname) {$/;"	m	class:S2
+S2	QueryCheck.java	/^class S2{$/;"	c
+S5	QueryCheck.java	/^  public S5 (String _sname, int _rating, float _age) {$/;"	m	class:S5
+S5	QueryCheck.java	/^class S5{$/;"	c
+SM_JoinTest	SM_JoinTest.java	/^public class SM_JoinTest$/;"	c
+SORT	QueryCheck.java	/^  static final int SORT   = 1;$/;"	f	class:Order
+SORTDriver	SortTest.java	/^  public SORTDriver() {$/;"	m	class:SORTDriver
+SORTDriver	SortTest.java	/^class SORTDriver extends TestDriver $/;"	c
+SORTPGNUM	SortTest.java	/^  private static int   SORTPGNUM = 12; $/;"	f	class:SORTDriver	file:
+Sailor	JoinTest.java	/^  public Sailor (int _sid, String _sname, int _rating,double _age) {$/;"	m	class:Sailor
+Sailor	JoinTest.java	/^class Sailor {$/;"	c
+Sailor	SM_JoinTest.java	/^  public Sailor (int _sid, String _sname, int _rating,double _age) {$/;"	m	class:Sailor
+Sailor	SM_JoinTest.java	/^class Sailor {$/;"	c
+SdoGeoMetaData	ITSTest.java	/^    public SdoGeoMetaData(String tablename, String column_name, double[] xdim, double[] ydim) {$/;"	m	class:SdoGeoMetaData
+SdoGeoMetaData	ITSTest.java	/^class SdoGeoMetaData{$/;"	c
+Search	QueryCheck.java	/^  int Search(Tuple t, int [] t_num) {$/;"	m	class:QueryCheck
+SortTest	SortTest.java	/^public class SortTest$/;"	c
+SpatialIndex	SpatialIndex.java	/^public class SpatialIndex {$/;"	c
+SpatialIndexDriver	SpatialIndexTest.java	/^    public SpatialIndexDriver() {$/;"	m	class:SpatialIndexDriver
+SpatialIndexDriver	SpatialIndexTest.java	/^class SpatialIndexDriver extends TestDriver$/;"	c
+SpatialIndexTest	SpatialIndexTest.java	/^public class SpatialIndexTest$/;"	c
+TRUE	BMTest.java	/^  private int TRUE  = 1;$/;"	f	class:BMDriver	file:
+T_O_flag	QueryCheck.java	/^  private int[] T_O_flag;  $/;"	f	class:QueryCheck	file:
+TestDriver	TestDriver.java	/^  protected TestDriver () {}$/;"	m	class:TestDriver
+TestDriver	TestDriver.java	/^  protected TestDriver (String nameRoot) {$/;"	m	class:TestDriver
+TestDriver	TestDriver.java	/^public class TestDriver {$/;"	c
+TupleCopy	QueryCheck.java	/^  void TupleCopy(Tuple to, Tuple from, int fldnum, AttrType []type) {$/;"	m	class:QueryCheck
+TupleList	QueryCheck.java	/^  public TupleList(){};$/;"	m	class:TupleList
+TupleList	QueryCheck.java	/^class TupleList {$/;"	c
+UNSORT	QueryCheck.java	/^  static final int UNSORT = 0;$/;"	f	class:Order
+age	JoinTest.java	/^  public double age;$/;"	f	class:Sailor
+age	QueryCheck.java	/^  float   age;$/;"	f	class:S5
+age	SM_JoinTest.java	/^  public double age;$/;"	f	class:Sailor
+bid	JoinTest.java	/^  public int    bid;$/;"	f	class:Boats
+bid	JoinTest.java	/^  public int    bid;$/;"	f	class:Reserves
+bid	SM_JoinTest.java	/^  public int    bid;$/;"	f	class:Boats
+bid	SM_JoinTest.java	/^  public int    bid;$/;"	f	class:Reserves
+bname	JoinTest.java	/^  public String bname;$/;"	f	class:Boats
+bname	SM_JoinTest.java	/^  public String bname;$/;"	f	class:Boats
+boats	JoinTest.java	/^  private Vector boats;$/;"	f	class:JoinsDriver	file:
+boats	SM_JoinTest.java	/^  private Vector boats;$/;"	f	class:JoinsDriver	file:
+checkException	TestDriver.java	/^  public boolean checkException (ChainException e, $/;"	m	class:TestDriver
+choice	HFTest.java	/^  private int choice;$/;"	f	class:HFDriver	file:
+colamarkets	ITSTest.java	/^    private Vector colamarkets;$/;"	f	class:ITSDriver	file:
+color	JoinTest.java	/^  public String color;$/;"	f	class:Boats
+color	SM_JoinTest.java	/^  public String color;$/;"	f	class:Boats
+column_name	ITSTest.java	/^    public String column_name;$/;"	f	class:SdoGeoMetaData
+columnum	QueryCheck.java	/^  private short    columnum;     \/\/ number of attributes in answer tuple$/;"	f	class:QueryCheck	file:
+count	QueryCheck.java	/^  int count;$/;"	f	class:Group
+createIndexTest	SpatialIndexTest.java	/^    public boolean createIndexTest() {$/;"	m	class:SpatialIndexDriver
+createTest	CTSTest.java	/^    public boolean createTest() {$/;"	m	class:CTSDriver
+curGroup	QueryCheck.java	/^  private int      curGroup;     \/\/ current group number$/;"	f	class:QueryCheck	file:
+data	HFTest.java	/^  private byte[]  data;$/;"	f	class:DummyRecord	file:
+data1	IndexTest.java	/^  private static String   data1[] = {$/;"	f	class:IndexDriver	file:
+data1	SortTest.java	/^  private static String   data1[] = {$/;"	f	class:SORTDriver	file:
+data2	IndexTest.java	/^  private static String   data2[] = {$/;"	f	class:IndexDriver	file:
+data2	SortTest.java	/^  private static String   data2[] = {$/;"	f	class:SORTDriver	file:
+date	JoinTest.java	/^  public String date;$/;"	f	class:Reserves
+date	QueryCheck.java	/^  public String date;$/;"	f	class:S1
+date	SM_JoinTest.java	/^  public String date;$/;"	f	class:Reserves
+dbpath	BTTest.java	/^  protected String dbpath;  $/;"	f	class:BTDriver
+dbpath	TestDriver.java	/^  protected String dbpath;  $/;"	f	class:TestDriver
+deleteFashion	BTTest.java	/^  public int deleteFashion;$/;"	f	class:BTDriver
+extra	QueryCheck.java	/^  private TupleList extra;$/;"	f	class:QueryCheck	file:
+file	BTTest.java	/^  public BTreeFile file;$/;"	f	class:BTDriver
+fval	HFTest.java	/^  public float  fval;      $/;"	f	class:DummyRecord
+getChoice	BTTest.java	/^  public static int getChoice () {$/;"	m	class:GetStuff
+getRecLength	HFTest.java	/^  public int getRecLength () {$/;"	m	class:DummyRecord
+getReturn	BTTest.java	/^  public static void getReturn () {$/;"	m	class:GetStuff
+gmark	QueryCheck.java	/^  private int gmark[];    $/;"	f	class:QueryCheck	file:
+groupnum	QueryCheck.java	/^  private int      groupnum;     \/\/ number of groups in answer tuples$/;"	f	class:QueryCheck	file:
+grouporder	QueryCheck.java	/^  private Order    grouporder;   \/\/ order of groups$/;"	f	class:QueryCheck	file:
+insertTest	ITSTest.java	/^    public boolean insertTest() {$/;"	m	class:ITSDriver
+ival	HFTest.java	/^  public int    ival; $/;"	f	class:DummyRecord
+keyType	BTTest.java	/^  public int keyType;$/;"	f	class:BTDriver
+len	QueryCheck.java	/^  int len;$/;"	f	class:Group
+logpath	BTTest.java	/^  protected String logpath;$/;"	f	class:BTDriver
+logpath	TestDriver.java	/^  protected String logpath;$/;"	f	class:TestDriver
+main	BMTest.java	/^   public static void main (String argv[]) {$/;"	m	class:BMTest
+main	BTTest.java	/^  public static void main(String [] argvs) {$/;"	m	class:BTTest
+main	CTSTest.java	/^    public static void main(String argv[])$/;"	m	class:CTSTest
+main	DBTest.java	/^   public static void main (String argv[]) {$/;"	m	class:DBTest
+main	HFTest.java	/^   public static void main (String argv[]) {$/;"	m	class:HFTest
+main	ITSTest.java	/^    public static void main(String argv[])$/;"	m	class:ITSTest
+main	IndexTest.java	/^  public static void main(String argv[])$/;"	m	class:IndexTest
+main	JoinTest.java	/^  public static void main(String argv[])$/;"	m	class:JoinTest
+main	SM_JoinTest.java	/^  public static void main(String argv[])$/;"	m	class:SM_JoinTest
+main	SortTest.java	/^  public static void main(String argv[])$/;"	m	class:SortTest
+main	SpatialIndexTest.java	/^    public static void main(String argv[])$/;"	m	class:SpatialIndexTest
+mark	QueryCheck.java	/^  int [] mark;$/;"	f	class:Group
+marketId	CTSTest.java	/^    public int marketId;$/;"	f	class:ColaMarkets
+menu	BTTest.java	/^ private void menu() {$/;"	m	class:BTDriver	file:
+missing	QueryCheck.java	/^  private TupleList missing;$/;"	f	class:QueryCheck	file:
+mygroup	QueryCheck.java	/^  private Group [] mygroup;$/;"	f	class:QueryCheck	file:
+mytuple	QueryCheck.java	/^  Tuple [] mytuple;$/;"	f	class:Group
+name	CTSTest.java	/^    public String name;$/;"	f	class:ColaMarkets
+name	HFTest.java	/^  public String name;  $/;"	f	class:DummyRecord
+next	QueryCheck.java	/^  TupleList next;$/;"	f	class:TupleList
+order	QueryCheck.java	/^  Order order;$/;"	f	class:Group
+order	QueryCheck.java	/^  int order;$/;"	f	class:Order
+postfix	BTTest.java	/^  public int postfix=0;$/;"	f	class:BTDriver
+rating	JoinTest.java	/^  public int    rating;$/;"	f	class:Sailor
+rating	QueryCheck.java	/^  int     rating;$/;"	f	class:S5
+rating	SM_JoinTest.java	/^  public int    rating;$/;"	f	class:Sailor
+reclen	HFTest.java	/^  private final static int reclen = 32;$/;"	f	class:HFDriver	file:
+reclen	HFTest.java	/^  private int reclen;$/;"	f	class:DummyRecord	file:
+report	QueryCheck.java	/^  public void report(int querynum) {$/;"	m	class:QueryCheck
+reserves	JoinTest.java	/^  private Vector reserves;$/;"	f	class:JoinsDriver	file:
+reserves	SM_JoinTest.java	/^  private Vector reserves;$/;"	f	class:JoinsDriver	file:
+runAllTests	BMTest.java	/^  protected boolean runAllTests (){$/;"	m	class:BMDriver
+runAllTests	BTTest.java	/^  protected void runAllTests (){$/;"	m	class:BTDriver
+runAllTests	DBTest.java	/^  protected boolean runAllTests (){$/;"	m	class:DBDriver
+runAllTests	HFTest.java	/^  protected boolean runAllTests (){$/;"	m	class:HFDriver
+runAllTests	TestDriver.java	/^  protected boolean runAllTests() {$/;"	m	class:TestDriver
+runStart	DBTest.java	/^  private PageId runStart = new PageId();$/;"	f	class:DBDriver	file:
+runTests	BMTest.java	/^  public boolean runTests () {$/;"	m	class:BMDriver
+runTests	BTTest.java	/^  public void runTests () {$/;"	m	class:BTDriver
+runTests	DBTest.java	/^  public boolean runTests () {$/;"	m	class:DBDriver
+runTests	HFTest.java	/^public boolean runTests () {$/;"	m	class:HFDriver
+runTests	IndexTest.java	/^  public boolean runTests ()  {$/;"	m	class:IndexDriver
+runTests	JoinTest.java	/^  public boolean runTests() {$/;"	m	class:JoinsDriver
+runTests	SM_JoinTest.java	/^  public boolean runTests() {$/;"	m	class:JoinsDriver
+runTests	SortTest.java	/^  public boolean runTests ()  {$/;"	m	class:SORTDriver
+runTests	TestDriver.java	/^  public boolean runTests ()  {$/;"	m	class:TestDriver
+sailors	JoinTest.java	/^  private Vector sailors;$/;"	f	class:JoinsDriver	file:
+sailors	SM_JoinTest.java	/^  private Vector sailors;$/;"	f	class:JoinsDriver	file:
+scan	BTTest.java	/^  public BTFileScan scan;$/;"	f	class:BTDriver
+sdogeommetadata	ITSTest.java	/^    private SdoGeoMetaData sdogeommetadata;$/;"	f	class:ITSDriver	file:
+setFloRec	HFTest.java	/^  public void setFloRec (byte[] _data) $/;"	m	class:DummyRecord
+setIntRec	HFTest.java	/^  public void setIntRec (byte[] _data) $/;"	m	class:DummyRecord
+setRecLen	HFTest.java	/^  public void setRecLen (int size) {$/;"	m	class:DummyRecord
+setStrRec	HFTest.java	/^  public void setStrRec (byte[] _data) $/;"	m	class:DummyRecord
+shape	CTSTest.java	/^    public Sdo_geometry shape;$/;"	f	class:ColaMarkets
+sid	JoinTest.java	/^  public int    sid;$/;"	f	class:Reserves
+sid	JoinTest.java	/^  public int    sid;$/;"	f	class:Sailor
+sid	SM_JoinTest.java	/^  public int    sid;$/;"	f	class:Reserves
+sid	SM_JoinTest.java	/^  public int    sid;$/;"	f	class:Sailor
+sizes	QueryCheck.java	/^  private short[] sizes;\/\/ sizes of attributes in answer tuple$/;"	f	class:QueryCheck	file:
+sname	JoinTest.java	/^  public String sname;$/;"	f	class:Sailor
+sname	QueryCheck.java	/^  String  sname;$/;"	f	class:S5
+sname	QueryCheck.java	/^  public String sname;$/;"	f	class:S1
+sname	QueryCheck.java	/^  public String sname;$/;"	f	class:S2
+sname	SM_JoinTest.java	/^  public String sname;$/;"	f	class:Sailor
+tablename	CTSTest.java	/^    public static final String tablename = "ColaMarkets";$/;"	f	class:ColaMarkets
+tablename	ITSTest.java	/^    public String tablename;$/;"	f	class:SdoGeoMetaData
+test1	BMTest.java	/^  protected boolean test1 () {$/;"	m	class:BMDriver
+test1	BTTest.java	/^  void test1(int n) $/;"	m	class:BTDriver
+test1	DBTest.java	/^  protected boolean test1 () {$/;"	m	class:DBDriver
+test1	HFTest.java	/^  protected boolean test1 ()  {$/;"	m	class:HFDriver
+test1	IndexTest.java	/^  protected boolean test1()$/;"	m	class:IndexDriver
+test1	SortTest.java	/^  protected boolean test1()$/;"	m	class:SORTDriver
+test1	TestDriver.java	/^  protected boolean test1 () { return true; }$/;"	m	class:TestDriver
+test2	BMTest.java	/^  protected boolean test2 () {$/;"	m	class:BMDriver
+test2	BTTest.java	/^  void test2(int n) $/;"	m	class:BTDriver
+test2	DBTest.java	/^  protected boolean test2 () {$/;"	m	class:DBDriver
+test2	HFTest.java	/^  protected boolean test2 () {$/;"	m	class:HFDriver
+test2	IndexTest.java	/^  protected boolean test2()$/;"	m	class:IndexDriver
+test2	SortTest.java	/^  protected boolean test2()$/;"	m	class:SORTDriver
+test2	TestDriver.java	/^  protected boolean test2 () { return true; }$/;"	m	class:TestDriver
+test3	BMTest.java	/^  protected boolean test3 () {$/;"	m	class:BMDriver
+test3	BTTest.java	/^  void test3(int n) $/;"	m	class:BTDriver
+test3	DBTest.java	/^  protected boolean test3 () {$/;"	m	class:DBDriver
+test3	HFTest.java	/^  protected boolean test3 () {$/;"	m	class:HFDriver
+test3	IndexTest.java	/^  protected boolean test3()$/;"	m	class:IndexDriver
+test3	SortTest.java	/^  protected boolean test3()$/;"	m	class:SORTDriver
+test3	TestDriver.java	/^  protected boolean test3 () { return true; }$/;"	m	class:TestDriver
+test4	BMTest.java	/^  protected boolean test4 () {$/;"	m	class:BMDriver
+test4	BTTest.java	/^  void test4(int n, int m) $/;"	m	class:BTDriver
+test4	DBTest.java	/^  protected boolean test4 ()  {$/;"	m	class:DBDriver
+test4	HFTest.java	/^  protected boolean test4 () {$/;"	m	class:HFDriver
+test4	IndexTest.java	/^  protected boolean test4()$/;"	m	class:IndexDriver
+test4	SortTest.java	/^  protected boolean test4()$/;"	m	class:SORTDriver
+test4	TestDriver.java	/^  protected boolean test4 () { return true; }$/;"	m	class:TestDriver
+test5	BMTest.java	/^  protected boolean test5 () {$/;"	m	class:BMDriver
+test5	BTTest.java	/^  void test5(int n, int m) $/;"	m	class:BTDriver
+test5	DBTest.java	/^    protected boolean test5 () {$/;"	m	class:DBDriver
+test5	HFTest.java	/^  protected boolean test5 () {$/;"	m	class:HFDriver
+test5	IndexTest.java	/^  protected boolean test5()$/;"	m	class:IndexDriver
+test5	SortTest.java	/^  protected boolean test5()$/;"	m	class:SORTDriver
+test5	TestDriver.java	/^  protected boolean test5 () { return true; }$/;"	m	class:TestDriver
+test6	BMTest.java	/^  protected boolean test6 () {$/;"	m	class:BMDriver
+test6	DBTest.java	/^  protected boolean test6 () {$/;"	m	class:DBDriver
+test6	HFTest.java	/^  protected boolean test6 () {$/;"	m	class:HFDriver
+test6	IndexTest.java	/^  protected boolean test6()$/;"	m	class:IndexDriver
+test6	SortTest.java	/^  protected boolean test6()$/;"	m	class:SORTDriver
+test6	TestDriver.java	/^  protected boolean test6 () { return true; }$/;"	m	class:TestDriver
+testName	BMTest.java	/^  protected String testName () {$/;"	m	class:BMDriver
+testName	DBTest.java	/^  protected String testName () {$/;"	m	class:DBDriver
+testName	HFTest.java	/^  protected String testName () {$/;"	m	class:HFDriver
+testName	IndexTest.java	/^  protected String testName()$/;"	m	class:IndexDriver
+testName	SortTest.java	/^  protected String testName()$/;"	m	class:SORTDriver
+testName	TestDriver.java	/^  protected String testName() { $/;"	m	class:TestDriver
+tests	BMTest.java	/^package tests;$/;"	p
+tests	BTTest.java	/^package tests;$/;"	p
+tests	CTSTest.java	/^package tests;$/;"	p
+tests	DBTest.java	/^package tests;$/;"	p
+tests	HFTest.java	/^package tests;$/;"	p
+tests	ITSTest.java	/^package tests;$/;"	p
+tests	IndexTest.java	/^package tests;$/;"	p
+tests	JoinTest.java	/^package tests;$/;"	p
+tests	QueryCheck.java	/^package tests;$/;"	p
+tests	SM_JoinTest.java	/^package tests;$/;"	p
+tests	SortTest.java	/^package tests;$/;"	p
+tests	SpatialIndex.java	/^package tests;$/;"	p
+tests	SpatialIndexTest.java	/^package tests;$/;"	p
+tests	TestDriver.java	/^package tests;$/;"	p
+toByteArray	HFTest.java	/^  public byte [] toByteArray() $/;"	m	class:DummyRecord
+total	QueryCheck.java	/^  private int      total;        \/\/ total number of correct answers$/;"	f	class:QueryCheck	file:
+tuple	QueryCheck.java	/^  Tuple tuple;$/;"	f	class:TupleList
+tuplenum	QueryCheck.java	/^  private int      tuplenum;     \/\/ total number of answer tuples$/;"	f	class:QueryCheck	file:
+types	QueryCheck.java	/^  private AttrType [] types; $/;"	f	class:QueryCheck	file:
+xdim	ITSTest.java	/^    public double[] xdim;$/;"	f	class:SdoGeoMetaData
+ydim	ITSTest.java	/^    public double[] ydim;$/;"	f	class:SdoGeoMetaData
