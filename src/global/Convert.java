@@ -154,6 +154,12 @@ public class Convert {
         return value;
     }
 
+   public static Sdogeometry  getSdogeometryValue(int position, byte[] data)
+            throw java.io.IOException{
+        
+      
+   }
+                    
 
     /**
      * update an integer value in the given byte array at the specified position
