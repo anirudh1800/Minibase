@@ -156,8 +156,26 @@ public class Convert {
 
    public static Sdogeometry  getSdogeometryValue(int position, byte[] data)
             throw java.io.IOException{
-        
-      
+        InputStream in;
+        DataInputStream instr;
+        byte tmp[] = new byte[18];
+        // copy the value from data array out to a tmp byte array
+        System.arraycopy(data, position, tmp, 0, 18);
+      /* creates a new data input stream to read data from the
+       * specified input stream
+       */
+        in = new ByteArrayInputStream(tmp);
+        instr = new DataInputStream(in);
+        short v = instr.readShort();
+        double x1,y1,x2,y2;
+        instr.read(x1, 2, 4);
+        instr.read(y1, 6, 4);
+        instr.read(x2, 10, 4);
+        instr.read(y2, 14, 4);
+        Integer[] arr = {x1,y1,x2,y2}; 
+        Vector vect = new Vector(Arrays.asList(arr));
+        Sdo_geometry value(v,vect);
+        return value;
    }
                     
 
