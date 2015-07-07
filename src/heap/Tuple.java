@@ -509,11 +509,10 @@ public class Tuple implements GlobalConst{
         for (i=0; i< fldCnt-1; i++)
         {
             switch(type[i].attrType) {
-
                 case AttrType.attrInteger:
                     val = Convert.getIntValue(fldOffset[i], data);
                     System.out.print(val);
-                    break;
+                    break:;
 
                 case AttrType.attrReal:
                     fval = Convert.getFloValue(fldOffset[i], data);
@@ -524,6 +523,10 @@ public class Tuple implements GlobalConst{
                     sval = Convert.getStrValue(fldOffset[i], data,fldOffset[i+1] - fldOffset[i]);
                     System.out.print(sval);
                     break;
+                case AttrType.attrSdogeometry:
+                    sdoval = Convert.getSdogeometryValue(fldOffset[i], data, fldOffset[i+1] - fldOffset[i]);
+                    System.out.println(sdoval);
+                    break;
 
                 case AttrType.attrNull:
                 case AttrType.attrSymbol:
@@ -533,7 +536,6 @@ public class Tuple implements GlobalConst{
         }
 
         switch(type[fldCnt-1].attrType) {
-
             case AttrType.attrInteger:
                 val = Convert.getIntValue(fldOffset[i], data);
                 System.out.print(val);
@@ -547,6 +549,11 @@ public class Tuple implements GlobalConst{
             case AttrType.attrString:
                 sval = Convert.getStrValue(fldOffset[i], data,fldOffset[i+1] - fldOffset[i]);
                 System.out.print(sval);
+                break;
+            
+            case AttrType.attrSdogeometry:
+                sdoval = Convert.getSdogeometryValue(fldOffset[i], data, fldOffset[i+1] - fldOffset[i]);
+                System.out.println(sdoval);
                 break;
 
             case AttrType.attrNull:
