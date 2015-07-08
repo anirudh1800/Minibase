@@ -86,4 +86,14 @@ ITSTest:ITSTest.java
 itstest: ITSTest
 	$(JAVA) tests.ITSTest
 
+# test STSTest1
+
+STSTest1:STSTest1.java
+	$(JAVAC) TestDriver.java STSTest1.java
+
+ststest1: STSTest1
+	$(JAVA) tests.STSTest1
+
+
+
 

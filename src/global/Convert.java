@@ -144,6 +144,7 @@ public class Convert {
         char value;
         byte tmp[] = new byte[2];
         // copy the value from data array out to a tmp byte array
+
         System.arraycopy(data, position, tmp, 0, 2);
       
       /* creates a new data input stream to read data from the

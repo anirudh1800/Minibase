@@ -173,18 +173,12 @@ class STSDriver extends TestDriver
         expr[0].next  = null;
         expr[0].op    = new AttrOperator(AttrOperator.aopEQ);
         expr[0].type1 = new AttrType(AttrType.attrSymbol);
-        expr[0].type2 = new AttrType(AttrType.attrSymbol);
-        expr[0].operand1.symbol = new FldSpec (new RelSpec(RelSpec.outer),1);
-        expr[0].operand2.symbol = new FldSpec (new RelSpec(RelSpec.innerRel),1);
+        expr[0].type2 = new AttrType(AttrType.attrString);
+        expr[0].operand1.symbol = new FldSpec (new RelSpec(RelSpec.innerRel),2);
+        expr[0].operand2.string = "cola_a";
 
-        expr[1].op    = new AttrOperator(AttrOperator.aopEQ);
-        expr[1].next  = null;
-        expr[1].type1 = new AttrType(AttrType.attrSymbol);
-        expr[1].type2 = new AttrType(AttrType.attrInteger);
-        expr[1].operand1.symbol = new FldSpec (new RelSpec(RelSpec.innerRel),2);
-        expr[1].operand2.integer = 1;
+        expr[1] = null;
 
-        expr[2] = null;
     }
 
     public void Query1() {
@@ -198,7 +192,7 @@ class STSDriver extends TestDriver
                 + " FROM cola_markets c"
                 + " WHERE c.name = 'cola_a'\n\n");
 
-        System.out.print ("\n(Tests FileScan, Projection, and Sort-Merge Join)\n");
+        System.out.print ("\n(Tests FileScan, Projection)\n");
 
         CondExpr[] outFilter = new CondExpr[2];
         outFilter[0] = new CondExpr();
