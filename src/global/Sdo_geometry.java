@@ -1,5 +1,6 @@
 package global;
 
+import java.util.Arrays;
 import java.util.Vector;
 
 /**
@@ -13,5 +14,9 @@ public class Sdo_geometry implements GlobalConst{
     public Sdo_geometry(Sdo_gtype _shapeType, Vector<Double> _coordinatesOfShape) {
         this.shapeType = _shapeType;
         this.coordinatesOfShape = _coordinatesOfShape;
+    }
+
+    public String toString(){
+        return "RECTANGLE ORDINATES: " + Arrays.toString(coordinatesOfShape.toArray());
     }
 }

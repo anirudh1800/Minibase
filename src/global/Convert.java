@@ -6,6 +6,7 @@ import java.io.*;
 import java.lang.*;
 import java.util.Iterator;
 import java.util.Vector;
+import java.util.Arrays;
 
 public class Convert {
 
@@ -154,38 +155,38 @@ public class Convert {
         return value;
     }
 
-   public static Sdogeometry  getSdogeometryValue(int position, byte[] data)
-            throw java.io.IOException{
+    public static Sdo_geometry getSdogeometryValue(int position, byte[] data, int length)
+            throws java.io.IOException {
         InputStream in;
         DataInputStream instr;
-        byte tmp[] = new byte[18];
+        byte tmp[] = new byte[length];
         // copy the value from data array out to a tmp byte array
-        System.arraycopy(data, position, tmp, 0, 18);
+        System.arraycopy(data, position, tmp, 0, length);
       /* creates a new data input stream to read data from the
        * specified input stream
        */
         in = new ByteArrayInputStream(tmp);
         instr = new DataInputStream(in);
         short v = instr.readShort();
-        double x1,y1,x2,y2;
-        instr.read(x1, 2, 4);
-        instr.read(y1, 6, 4);
-        instr.read(x2, 10, 4);
-        instr.read(y2, 14, 4);
-        Integer[] arr = {x1,y1,x2,y2}; 
+        double x1, y1, x2, y2;
+        x1 = instr.readDouble();
+        y1 = instr.readDouble();
+        x2 = instr.readDouble();
+        y2 = instr.readDouble();
+        double[] arr = {x1, y1, x2, y2};
         Vector vect = new Vector(Arrays.asList(arr));
-        Sdo_geometry value(v,vect);
+        Sdo_geometry value = new Sdo_geometry(GlobalConst.Sdo_gtype.RECTANGLE, vect);
         return value;
-   }
-                    
+    }
+
 
     /**
      * update an integer value in the given byte array at the specified position
      *
-     * @param data a byte array
+     * @param data     a byte array
+     * @param value    the value to be copied into the data[]
+     * @param position the position of tht value in data[]
      * @throws java.io.IOException I/O errors
-     * @param    value the value to be copied into the data[]
-     * @param    position the position of tht value in data[]
      */
     public static void setIntValue(int value, int position, byte[] data)
             throws java.io.IOException {
@@ -212,10 +213,10 @@ public class Convert {
     /**
      * update a float value in the given byte array at the specified position
      *
-     * @param data a byte array
+     * @param data     a byte array
+     * @param value    the value to be copied into the data[]
+     * @param position the position of tht value in data[]
      * @throws java.io.IOException I/O errors
-     * @param    value the value to be copied into the data[]
-     * @param    position the position of tht value in data[]
      */
     public static void setFloValue(float value, int position, byte[] data)
             throws java.io.IOException {
@@ -242,10 +243,10 @@ public class Convert {
     /**
      * update a short integer in the given byte array at the specified position
      *
-     * @param data a byte array
+     * @param data     a byte array
+     * @param value    the value to be copied into data[]
+     * @param position the position of tht value in data[]
      * @throws java.io.IOException I/O errors
-     * @param    value the value to be copied into data[]
-     * @param    position the position of tht value in data[]
      */
     public static void setShortValue(short value, int position, byte[] data)
             throws java.io.IOException {
@@ -332,10 +333,10 @@ public class Convert {
     /**
      * update an integer value in the given byte array at the specified position
      *
-     * @param data a byte array
+     * @param data     a byte array
+     * @param value    the value to be copied into the data[]
+     * @param position the position of tht value in data[]
      * @throws java.io.IOException I/O errors
-     * @param    value the value to be copied into the data[]
-     * @param    position the position of tht value in data[]
      */
     public static void setSdogeometryValue(Sdo_geometry value, int position, byte[] data)
             throws java.io.IOException {
@@ -365,7 +366,7 @@ public class Convert {
     }
 
     public static void setRealArrayValue(double[] val, int position, byte[] data)
-            throws java.io.IOException{
+            throws java.io.IOException {
         /* creates a new data output stream to write data to
        * underlying output stream
        */
@@ -374,7 +375,7 @@ public class Convert {
         DataOutputStream outstr = new DataOutputStream(out);
 
         // write the value to the output stream
-        for(double i: val) {
+        for (double i : val) {
             outstr.writeDouble(i);
 
         }

@@ -504,6 +504,7 @@ public class Tuple implements GlobalConst{
         int i, val;
         float fval;
         String sval;
+        Sdo_geometry sdoval;
 
         System.out.print("[");
         for (i=0; i< fldCnt-1; i++)
@@ -512,7 +513,7 @@ public class Tuple implements GlobalConst{
                 case AttrType.attrInteger:
                     val = Convert.getIntValue(fldOffset[i], data);
                     System.out.print(val);
-                    break:;
+                    break;
 
                 case AttrType.attrReal:
                     fval = Convert.getFloValue(fldOffset[i], data);
