@@ -4,6 +4,8 @@ package heap;
 
 import java.io.*;
 import java.lang.*;
+import java.util.Vector;
+
 import global.*;
 
 
@@ -195,7 +197,7 @@ public class Tuple implements GlobalConst{
         int val;
         if ( (fldNo > 0) && (fldNo <= fldCnt))
         {
-            val = Convert.getIntValue(fldOffset[fldNo -1], data);
+            val = Convert.getIntValue(fldOffset[fldNo - 1], data);
             return val;
         }
         else
@@ -288,7 +290,7 @@ public class Tuple implements GlobalConst{
     {
         if ( (fldNo > 0) && (fldNo <= fldCnt))
         {
-            Convert.setIntValue (val, fldOffset[fldNo -1], data);
+            Convert.setIntValue(val, fldOffset[fldNo - 1], data);
             return this;
         }
         else
@@ -312,7 +314,7 @@ public class Tuple implements GlobalConst{
     {
         if ( (fldNo > 0) && (fldNo <= fldCnt))
         {
-            Convert.setRealArrayValue(val, fldOffset[fldNo -1], data);
+            Convert.setRealArrayValue(val, fldOffset[fldNo - 1], data);
             return this;
         }
         else
@@ -332,7 +334,7 @@ public class Tuple implements GlobalConst{
     {
         if ( (fldNo > 0) && (fldNo <= fldCnt))
         {
-            Convert.setFloValue (val, fldOffset[fldNo -1], data);
+            Convert.setFloValue(val, fldOffset[fldNo - 1], data);
             return this;
         }
         else
@@ -414,8 +416,9 @@ public class Tuple implements GlobalConst{
                     break;
 
                 case AttrType.attrSdogeometry:
-                    incr = 36;
+                    incr = 34;
                     break;
+
                 case AttrType.attrRealArray:
                     incr = 32;
                     break;
@@ -439,11 +442,11 @@ public class Tuple implements GlobalConst{
                 break;
 
             case AttrType.attrString:
-                incr =(short) ( strSizes[strCount] +2);  //strlen in bytes = strlen +2
+                incr =(short) ( strSizes[strCount] + 2);  //strlen in bytes = strlen +2
                 break;
 
             case AttrType.attrSdogeometry:
-                incr = 36;
+                incr = 34;
                 break;
 
             case AttrType.attrRealArray:
@@ -524,10 +527,13 @@ public class Tuple implements GlobalConst{
                     sval = Convert.getStrValue(fldOffset[i], data,fldOffset[i+1] - fldOffset[i]);
                     System.out.print(sval);
                     break;
+
                 case AttrType.attrSdogeometry:
                     sdoval = Convert.getSdogeometryValue(fldOffset[i], data, fldOffset[i+1] - fldOffset[i]);
-                    System.out.println(sdoval);
-                    break;
+                    String output = "SDO_GEOMETRY(" + (int) sdoval.shapeType.ordinal() +",[ ";
+                    for(double d: sdoval.coordinatesOfShape)
+                        output += d + " ";
+                    System.out.print(output + "])");
 
                 case AttrType.attrNull:
                 case AttrType.attrSymbol:
@@ -554,7 +560,10 @@ public class Tuple implements GlobalConst{
             
             case AttrType.attrSdogeometry:
                 sdoval = Convert.getSdogeometryValue(fldOffset[i], data, fldOffset[i+1] - fldOffset[i]);
-                System.out.println(sdoval);
+                String output = "SDO_GEOMETRY(" + (int) sdoval.shapeType.ordinal() +",[ ";
+                for(double d: sdoval.coordinatesOfShape)
+                    output += d + " ";
+                System.out.print(output + "])");
                 break;
 
             case AttrType.attrNull:

@@ -175,8 +175,7 @@ public class Convert {
         x2 = instr.readDouble();
         y2 = instr.readDouble();
         double[] arr = {x1, y1, x2, y2};
-        Vector vect = new Vector(Arrays.asList(arr));
-        Sdo_geometry value = new Sdo_geometry(GlobalConst.Sdo_gtype.RECTANGLE, vect);
+        Sdo_geometry value = new Sdo_geometry(GlobalConst.Sdo_gtype.RECTANGLE, arr);
         return value;
     }
 
@@ -350,16 +349,14 @@ public class Convert {
 
         // write the value to the output stream
         outstr.writeShort((short) value.shapeType.ordinal());
-        Vector<Double> v = value.coordinatesOfShape;
-        Iterator<Double> it = v.iterator();
-        while (it.hasNext()) {
-            outstr.writeDouble(it.next());
-        }
+
+        for(double d: value.coordinatesOfShape)
+            outstr.writeDouble(d);
+
 
         // creates a byte array with this output stream size and the
         // valid contents of the buffer have been copied into it
         byte[] B = ((ByteArrayOutputStream) out).toByteArray();
-
         int sz = outstr.size();
         // copies the first sz bytes of this byte array into data[]
         System.arraycopy(B, 0, data, position, sz);

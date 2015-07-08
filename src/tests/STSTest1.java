@@ -53,21 +53,11 @@ class STSDriver extends TestDriver
         //build ColaMarkets table
         colamarkets = new Vector();
 
-        Vector<Double> v = new Vector<Double>();
-
-        v.add(1.0);
-        v.add(1.0);
-        v.add(2.0);
-        v.add(3.0);
+        double[] v = new double[] {1.0, 1.0, 2.0, 3.0};
 
         colamarkets.addElement(new ColaMarkets(1, "cola_a", new Sdo_geometry(Sdo_gtype.RECTANGLE, v)));
 
-        v.clear();
-
-        v.add(2.5);
-        v.add(3.5);
-        v.add(3.5);
-        v.add(4.5);
+        v = new double[] {2.5, 3.5, 3.5, 4.5};
 
         colamarkets.addElement(new ColaMarkets(2, "cola_b", new Sdo_geometry(Sdo_gtype.RECTANGLE, v)));
 
@@ -75,8 +65,8 @@ class STSDriver extends TestDriver
         int numMarkets = 2;
         int numMarkets_attrs = 3;
 
-        String dbpath = "/tmp/" + System.getProperty("user.name") + ".minibase.ststestdb";
-        String logpath = "/tmp/" + System.getProperty("user.name") + ".stslog";
+        String dbpath = "/tmp/" + System.getProperty("user.name") + ".minibase.ststest1db";
+        String logpath = "/tmp/" + System.getProperty("user.name") + ".sts1log";
 
         String remove_cmd = "/bin/rm -rf ";
         String remove_logcmd = remove_cmd + logpath;
@@ -119,6 +109,7 @@ class STSDriver extends TestDriver
         }
 
         int size = t.size();
+        System.out.println("Size:" + size);
 
         // selecting the tuple into file "colamarkets"
         RID rid;
@@ -190,7 +181,7 @@ class STSDriver extends TestDriver
         System.out.print ("Query: Find the area of a cola market cola_a "
                 + "SELECT c.name, SDO_GEOM.SDO_AREA(c.shape, 0.005)"
                 + " FROM cola_markets c"
-                + " WHERE c.name = 'cola_a'\n\n");
+                + " WHERE c.name = 'cola_a'\n");
 
         System.out.print ("\n(Tests FileScan, Projection)\n");
 

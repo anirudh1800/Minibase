@@ -84,23 +84,14 @@ class ITSDriver extends TestDriver
         //build ColaMarkets table
         colamarkets = new Vector();
 
-        Vector<Double> v = new Vector<Double>();
-
-        v.add(1.0);
-        v.add(1.0);
-        v.add(2.0);
-        v.add(3.0);
+        double[] v = new double[] {1.0, 1.0, 2.0, 3.0};
 
         colamarkets.addElement(new ColaMarkets(1, "cola_a", new Sdo_geometry(Sdo_gtype.RECTANGLE, v)));
 
-        v.clear();
-
-        v.add(2.5);
-        v.add(3.5);
-        v.add(3.5);
-        v.add(4.5);
+        v = new double[] {2.5, 3.5, 3.5, 4.5};
 
         colamarkets.addElement(new ColaMarkets(2, "cola_b", new Sdo_geometry(Sdo_gtype.RECTANGLE, v)));
+
 
         boolean status = OK;
         int numMarkets = 2;
