@@ -20,11 +20,11 @@ public class Sdo_geometry implements GlobalConst{
         return "RECTANGLE ORDINATES: " + Arrays.toString(coordinatesOfShape.toArray());
     }
     public double area() {
-        double area = abs(coordinatesOfShape.get(2) - coordinatesOfShape.get(0)) * 
-                      abs(coordinatesOfShape.get(1) - coordinatesOfShape.get(3))
+        double area = Math.abs(coordinatesOfShape.get(2) - coordinatesOfShape.get(0)) * 
+                      Math.abs(coordinatesOfShape.get(1) - coordinatesOfShape.get(3));
         return area;
     }
-    public double intersection(Sdo_geometry x) {
-        
+    public Sdo_geometry  intersection(Sdo_geometry x) {
+       return null;
     }
 }
