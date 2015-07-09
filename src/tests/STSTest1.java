@@ -165,7 +165,7 @@ class STSDriver extends TestDriver
         expr[0].op    = new AttrOperator(AttrOperator.aopEQ);
         expr[0].type1 = new AttrType(AttrType.attrSymbol);
         expr[0].type2 = new AttrType(AttrType.attrString);
-        expr[0].operand1.symbol = new FldSpec (new RelSpec(RelSpec.innerRel),2);
+        expr[0].operand1.symbol = new FldSpec (new RelSpec(RelSpec.outer), 2);
         expr[0].operand2.string = "cola_a";
 
         expr[1] = null;
@@ -203,8 +203,9 @@ class STSDriver extends TestDriver
         short [] Msizes = new short[1];
         Msizes[0] = 30; //first elt. is 30
 
-        FldSpec [] Mprojection = new FldSpec[1];
-        Mprojection[0] = new FldSpec(new RelSpec(RelSpec.outer), 1);
+        FldSpec [] Mprojection = new FldSpec[2];
+        Mprojection[0] = new FldSpec(new RelSpec(RelSpec.outer), 2);
+        Mprojection[1] = new FldSpec(new RelSpec(RelSpec.outer), 3);
 
         AttrType [] jtype = new AttrType[2];
         jtype[0] = new AttrType (AttrType.attrString);
@@ -216,12 +217,13 @@ class STSDriver extends TestDriver
         FileScan am = null;
         try {
             am  = new FileScan("colamarkets.in", Mtypes, Msizes,
-                    (short)3, (short)1,
+                    (short)3, (short)2,
                     Mprojection, null);
         }
         catch (Exception e) {
             status = FAIL;
             System.err.println (""+e);
+            e.printStackTrace();
         }
 
         if (status != OK) {
@@ -229,6 +231,7 @@ class STSDriver extends TestDriver
             System.err.println ("*** Error setting up scan for sailors");
             Runtime.getRuntime().exit(1);
         }
+        System.out.println("done");
         try {
             while ((t = am.get_next()) != null) {
                 t.print(jtype);
@@ -236,6 +239,7 @@ class STSDriver extends TestDriver
         }
         catch (Exception e) {
             System.err.println (""+e);
+            e.printStackTrace();
             Runtime.getRuntime().exit(1);
         }
     }

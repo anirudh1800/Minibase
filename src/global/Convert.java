@@ -180,6 +180,30 @@ public class Convert {
     }
 
 
+    public static Sdo_geometry getSdogeometryValue(int position, byte[] data)
+            throws java.io.IOException {
+        InputStream in;
+        DataInputStream instr;
+        byte tmp[] = new byte[34];
+        // copy the value from data array out to a tmp byte array
+        System.arraycopy(data, position, tmp, 0, 34);
+      /* creates a new data input stream to read data from the
+       * specified input stream
+       */
+        in = new ByteArrayInputStream(tmp);
+        instr = new DataInputStream(in);
+        short v = instr.readShort();
+        double x1, y1, x2, y2;
+        x1 = instr.readDouble();
+        y1 = instr.readDouble();
+        x2 = instr.readDouble();
+        y2 = instr.readDouble();
+        double[] arr = {x1, y1, x2, y2};
+        Sdo_geometry value = new Sdo_geometry(GlobalConst.Sdo_gtype.RECTANGLE, arr);
+        return value;
+    }
+
+
     /**
      * update an integer value in the given byte array at the specified position
      *

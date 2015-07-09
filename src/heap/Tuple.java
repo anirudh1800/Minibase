@@ -204,6 +204,19 @@ public class Tuple implements GlobalConst{
             throw new FieldNumberOutOfBoundException (null, "TUPLE:TUPLE_FLDNO_OUT_OF_BOUND");
     }
 
+    public Sdo_geometry getSdogeometryFld(int fldNo)
+            throws IOException, FieldNumberOutOfBoundException
+    {
+        Sdo_geometry val;
+        if ( (fldNo > 0) && (fldNo <= fldCnt))
+        {
+            val = Convert.getSdogeometryValue(fldOffset[fldNo - 1], data);
+            return val;
+        }
+        else
+            throw new FieldNumberOutOfBoundException (null, "TUPLE:TUPLE_FLDNO_OUT_OF_BOUND");
+    }
+
     /**
      * Convert this field in to float
      *
