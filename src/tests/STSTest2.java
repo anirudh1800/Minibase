@@ -19,30 +19,26 @@ import java.util.Vector;
 //    FROM cola_markets c 
 //    WHERE c.name = 'cola_a'; 
 
-public class STSTest1
+public class STSTest2
 {
     public static void main(String argv[])
     {
-        boolean stsstatus;
+        boolean sts2status;
 
-        STSDriver sts = new STSDriver();
-        stsstatus = sts.selectTest();
+        STSDriver2 sts2 = new STSDriver2();
+        sts2status = sts2.selectTest();
 
-        if (stsstatus != true) {
+        if (sts2status != true) {
             System.out.println("Error ocurred during STS test");
         }
         else {
             System.out.println("STS test completed successfully");
         }
-        double array[] = new double[] {1,1,2,3};
-        Sdo_geometry x = new Sdo_geometry(GlobalConst.Sdo_gtype.RECTANGLE, array);
-        double array1[] = new double[] {1.5,2,3,4};
-        Sdo_geometry y = new Sdo_geometry(GlobalConst.Sdo_gtype.RECTANGLE, array1);
-        Sdo_geometry shape = x.intersection(y);
+
     }
 }
 
-class STSDriver extends TestDriver
+class STSDriver2 extends TestDriver
         implements GlobalConst {
 
     private boolean OK = true;
@@ -52,8 +48,8 @@ class STSDriver extends TestDriver
     /**
      * Constructor
      */
-    public STSDriver() {
-        System.out.print("Started STS tests" + "\n");
+    public STSDriver2() {
+        System.out.print("Started STS tests2" + "\n");
 
         //build ColaMarkets table
         colamarkets = new Vector();
@@ -70,18 +66,18 @@ class STSDriver extends TestDriver
         int numMarkets = 2;
         int numMarkets_attrs = 3;
 
-        String dbpath = "/tmp/" + System.getProperty("user.name") + ".minibase.ststest1db";
-        String logpath = "/tmp/" + System.getProperty("user.name") + ".sts1log";
+        String dbpath = "/tmp/" + System.getProperty("user.name") + ".minibase.ststest2db";
+        String logpath = "/tmp/" + System.getProperty("user.name") + ".sts2log";
 
         String remove_cmd = "/bin/rm -rf ";
         String remove_logcmd = remove_cmd + logpath;
         String remove_dbcmd = remove_cmd + dbpath;
-        String remove_stscmd = remove_cmd + dbpath;
+        String remove_sts2cmd = remove_cmd + dbpath;
 
         try {
             Runtime.getRuntime().exec(remove_logcmd);
             Runtime.getRuntime().exec(remove_dbcmd);
-            Runtime.getRuntime().exec(remove_stscmd);
+            Runtime.getRuntime().exec(remove_sts2cmd);
         } catch (IOException e) {
             System.err.println("" + e);
         }
@@ -173,7 +169,14 @@ class STSDriver extends TestDriver
         expr[0].operand1.symbol = new FldSpec (new RelSpec(RelSpec.outer), 2);
         expr[0].operand2.string = "cola_a";
 
-        expr[1] = null;
+        expr[1].next  = null;
+        expr[1].op    = new AttrOperator(AttrOperator.aopEQ);
+        expr[1].type1 = new AttrType(AttrType.attrSymbol);
+        expr[1].type2 = new AttrType(AttrType.attrString);
+        expr[1].operand1.symbol = new FldSpec (new RelSpec(RelSpec.outer), 2);
+        expr[1].operand2.string = "cola_b";
+
+        expr[2] = null;
 
     }
 
@@ -188,11 +191,12 @@ class STSDriver extends TestDriver
                 + " FROM cola_markets c_a, cola_markets c_b"
                 + " WHERE c_a.name = 'cola_a' and c_b.name = 'cola_b'\n");
 
-        System.out.print ("\n(Tests FileScan, Projection)\n");
+        System.out.print ("\n(Tests2 FileScan, Projection)\n");
 
-        CondExpr[] outFilter = new CondExpr[2];
+        CondExpr[] outFilter = new CondExpr[3];
         outFilter[0] = new CondExpr();
         outFilter[1] = new CondExpr();
+        outFilter[2] = new CondExpr();
 
         Query1_CondExpr(outFilter);
 
@@ -237,11 +241,25 @@ class STSDriver extends TestDriver
             Runtime.getRuntime().exit(1);
         }
         System.out.println("done");
+        Sdo_geometry x[] = new Sdo_geometry[2];
+
         try {
+            int i = 0;
             while ((t = am.get_next()) != null) {
                 t.print(jtype);
+                x[i++] = t.getSdogeometryFld(2);
             }
+
+            Sdo_geometry sdoval = x[0].intersection(x[1]);
+            if (sdoval != null) {
+                String output = "SDO_GEOMETRY(" + (int) sdoval.shapeType.ordinal() + ",[ ";
+                for (double d : sdoval.coordinatesOfShape)
+                    output += d + " ";
+                System.out.print(output + "])");
+            }
+
         }
+
         catch (Exception e) {
             System.err.println (""+e);
             e.printStackTrace();
