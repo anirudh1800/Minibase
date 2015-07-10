@@ -173,6 +173,8 @@ class SpatialIndexDriver extends TestDriver
         for (int i = 0; i < numMarkets; i++) {
             si.add(rects[i],((ColaMarkets) colamarkets.elementAt(i)).marketId);
         }
+
+        System.out.println("\n R-Tree \n number of entries in Tree " + si.size());
     }
 
 
