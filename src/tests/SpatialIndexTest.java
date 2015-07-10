@@ -1,85 +1,86 @@
 package tests;
 
-/**
- * Created by anirudhgali on 6/30/15.
- */
-
-import global.AttrType;
-import global.GlobalConst;
-import global.SystemDefs;
+import btree.BTreeFile;
+import btree.IntegerKey;
+import com.infomatiq.jsi.SpatialIndex;
+import com.infomatiq.jsi.rtree.RTree;
+import global.*;
+import heap.Heapfile;
+import heap.Scan;
 import heap.Tuple;
+import index.IndexScan;
+import iterator.*;
 
+import java.awt.*;
 import java.io.IOException;
-
-class ColaSpatialIdx{
-
-}
-/*
-*
-CREATE INDEX cola_spatial_idx
-*        ON cola_markets(shape)
-*        INDEXTYPE IS MDSYS.SPATIAL_INDEX;
-*/
-
-
-
+import java.util.Vector;
 
 /**
  * Created by anirudhgali on 6/27/15.
  */
 
+//SELECT c.name, SDO_GEOM.SDO_AREA(c.shape, 0.005) 
+//    FROM cola_markets c 
+//    WHERE c.name = 'cola_a'; 
+
 public class SpatialIndexTest
 {
     public static void main(String argv[])
     {
-        boolean spatialindexstatus;
-        //SystemDefs global = new SystemDefs("bingjiedb", 100, 70, null);
-        //JavabaseDB.openDB("/tmp/nwangdb", 5000);
+        boolean sindextatus;
 
-        SpatialIndexDriver sid = new SpatialIndexDriver();
-        spatialindexstatus = sid.createIndexTest();
-        if (spatialindexstatus != true) {
-            System.out.println("Error ocurred during Spatial Index test");
+        SpatialIndexDriver sts = new SpatialIndexDriver();
+        sindextatus = sts.indexTest();
+
+        if (sindextatus != true) {
+            System.out.println("Error ocurred during STS test");
         }
         else {
-            System.out.println("Spatial Index test completed successfully");
+            System.out.println("STS test completed successfully");
         }
     }
 }
-
 
 class SpatialIndexDriver extends TestDriver
         implements GlobalConst {
 
     private boolean OK = true;
     private boolean FAIL = false;
+    private Vector colamarkets;
 
     /**
      * Constructor
      */
     public SpatialIndexDriver() {
+        System.out.print("Started index tests" + "\n");
 
-    }
+        //build ColaMarkets table
+        colamarkets = new Vector();
 
-    public boolean createIndexTest() {
+        double[] v = new double[] {1.0, 1.0, 2.0, 3.0};
 
-        System.out.print("Started spatial index tests" + "\n");
+        colamarkets.addElement(new ColaMarkets(1, "cola_a", new Sdo_geometry(Sdo_gtype.RECTANGLE, v)));
+
+        v = new double[] {2.5, 3.5, 3.5, 4.5};
+
+        colamarkets.addElement(new ColaMarkets(2, "cola_b", new Sdo_geometry(Sdo_gtype.RECTANGLE, v)));
 
         boolean status = OK;
+        int numMarkets = 2;
         int numMarkets_attrs = 3;
 
-        String dbpath = "/tmp/" + System.getProperty("user.name") + ".minibase.spatialindextestdb";
-        String logpath = "/tmp/" + System.getProperty("user.name") + ".spatialindexlog";
+        String dbpath = "/tmp/" + System.getProperty("user.name") + ".minibase.ststest1db";
+        String logpath = "/tmp/" + System.getProperty("user.name") + ".sts1log";
 
         String remove_cmd = "/bin/rm -rf ";
         String remove_logcmd = remove_cmd + logpath;
         String remove_dbcmd = remove_cmd + dbpath;
-        String remove_ctscmd = remove_cmd + dbpath;
+        String remove_stscmd = remove_cmd + dbpath;
 
         try {
             Runtime.getRuntime().exec(remove_logcmd);
             Runtime.getRuntime().exec(remove_dbcmd);
-            Runtime.getRuntime().exec(remove_ctscmd);
+            Runtime.getRuntime().exec(remove_stscmd);
         } catch (IOException e) {
             System.err.println("" + e);
         }
@@ -92,19 +93,18 @@ class SpatialIndexDriver extends TestDriver
 
         SystemDefs sysdef = new SystemDefs(dbpath, 1000, NUMBUF, "Clock");
 
-        // creating the colamarkets relation
+        // creating the cola_markets relation
         AttrType[] Mtypes = new AttrType[3];
         Mtypes[0] = new AttrType(AttrType.attrInteger);
         Mtypes[1] = new AttrType(AttrType.attrString);
         Mtypes[2] = new AttrType(AttrType.attrSdogeometry);
-
 
         //SOS
         short[] Msizes = new short[1];
         Msizes[0] = 30; //first elt. is 30
 
         Tuple t = new Tuple();
-        try{
+        try {
             t.setHdr((short) 3, Mtypes, Msizes);
         } catch (Exception e) {
             System.err.println("*** error in Tuple.setHdr() ***");
@@ -113,13 +113,63 @@ class SpatialIndexDriver extends TestDriver
         }
 
         int size = t.size();
+        System.out.println("Size:" + size);
+
+        SpatialIndex si = new RTree();
+        // selecting the tuple into file "colamarkets"
+       
+        RID rid;
+        Heapfile f = null;
+        try {
+            f = new Heapfile("colamarkets.in");
+        } catch (Exception e) {
+            System.err.println("*** error in Heapfile constructor ***");
+            status = FAIL;
+            e.printStackTrace();
+        }
+
+        t = new Tuple(size);
+        try {
+            t.setHdr((short) 3, Mtypes, Msizes);
+        } catch (Exception e) {
+            System.err.println("*** error in Tuple.setHdr() ***");
+            status = FAIL;
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < numMarkets; i++) {
+            try {
+                t.setIntFld(1, ((ColaMarkets) colamarkets.elementAt(i)).marketId);
+                t.setStrFld(2, ((ColaMarkets) colamarkets.elementAt(i)).name);
+                t.setSdogeometryFld(3, ((ColaMarkets) colamarkets.elementAt(i)).shape);
+            } catch (Exception e) {
+                System.err.println("*** Heapfile error in Tuple.setStrFld() ***");
+                status = FAIL;
+                e.printStackTrace();
+            }
+
+            try {
+                rid = f.insertRecord(t.returnTupleByteArray());
+            } catch (Exception e) {
+                System.err.println("*** error in Heapfile.selectRecord() ***");
+                status = FAIL;
+                e.printStackTrace();
+            }
+        }
+
+
 
         if (status != OK) {
             //bail out
-            System.err.println("*** Error creating relation for colamarkets");
+            System.err.println("*** Error creation relation for colamarkets");
             Runtime.getRuntime().exit(1);
         }
+    }
 
+
+    public boolean indexTest() {
+
+        System.out.print("Finished spatial index testing" + "\n");
         return true;
     }
 
@@ -130,5 +180,6 @@ class SpatialIndexDriver extends TestDriver
                 + " the Computer  Sciences Department or the\n"
                 + "developers...\n\n");
     }
+
 }
 

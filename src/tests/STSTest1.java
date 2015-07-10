@@ -16,6 +16,7 @@ import java.util.Vector;
 /**
  * Created by anirudhgali on 6/27/15.
  */
+
 //SELECT c.name, SDO_GEOM.SDO_AREA(c.shape, 0.005) 
 //    FROM cola_markets c 
 //    WHERE c.name = 'cola_a'; 
