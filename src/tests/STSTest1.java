@@ -35,11 +35,6 @@ public class STSTest1
         else {
             System.out.println("STS test completed successfully");
         }
-        double array[] = new double[] {1,1,2,3};
-        Sdo_geometry x = new Sdo_geometry(GlobalConst.Sdo_gtype.RECTANGLE, array);
-        double array1[] = new double[] {1.5,2,3,4};
-        Sdo_geometry y = new Sdo_geometry(GlobalConst.Sdo_gtype.RECTANGLE, array1);
-        Sdo_geometry shape = x.intersection(y);
     }
 }
 
@@ -95,7 +90,7 @@ class STSDriver extends TestDriver
 
         SystemDefs sysdef = new SystemDefs(dbpath, 1000, NUMBUF, "Clock");
 
-        // creating the sailors relation
+        // creating the cola_markets relation
         AttrType[] Mtypes = new AttrType[3];
         Mtypes[0] = new AttrType(AttrType.attrInteger);
         Mtypes[1] = new AttrType(AttrType.attrString);
@@ -183,11 +178,11 @@ class STSDriver extends TestDriver
         System.out.print("**********************Query1 strating *********************\n");
         boolean status = OK;
 
-        // Sailors, Boats, Reserves Queries.
+        // cola_market
         System.out.print ("Query: Find the intersection of cola market cola_a and cola market cola_b"
                 + "SELECT c.name, SDO_GEOM.SDO_AREA(c.shape, 0.005)"
                 + " FROM cola_markets c_a, cola_markets c_b"
-                + " WHERE c_a.name = 'cola_a' and c_b.name = 'cola_b'\n");
+                + " WHERE c_a.name = 'cola_a'\n");
 
         System.out.print ("\n(Tests FileScan, Projection)\n");
 
@@ -234,14 +229,21 @@ class STSDriver extends TestDriver
 
         if (status != OK) {
             //bail out
-            System.err.println ("*** Error setting up scan for sailors");
+            System.err.println ("*** Error setting up scan for cola_market");
             Runtime.getRuntime().exit(1);
         }
         System.out.println("done");
         try {
             System.out.println("Name, Area");
             while ((t = am.get_next()) != null) {
-                System.out.println(t.getStrFld(1) + ", " + t.getSdogeometryFld(2).area());
+                Sdo_geometry sdoval = t.getSdogeometryFld(2);
+                if (sdoval != null) {
+                    String output = "SDO_GEOMETRY(" + (int) sdoval.shapeType.ordinal() + ",[ ";
+                    for (double d : sdoval.coordinatesOfShape)
+                        output += d + " ";
+                    System.out.println(output + "])");
+                }
+                System.out.println(t.getStrFld(1) + ", " + sdoval.area());
             }
         }
         catch (Exception e) {

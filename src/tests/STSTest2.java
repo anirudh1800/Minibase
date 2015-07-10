@@ -29,10 +29,10 @@ public class STSTest2
         sts2status = sts2.selectTest();
 
         if (sts2status != true) {
-            System.out.println("Error ocurred during STS test");
+            System.out.println("Error ocurred during STS test 2");
         }
         else {
-            System.out.println("STS test completed successfully");
+            System.out.println("STS test 2 completed successfully");
         }
 
     }
@@ -185,7 +185,7 @@ class STSDriver2 extends TestDriver
         System.out.print("**********************Query1 strating *********************\n");
         boolean status = OK;
 
-        // Sailors, Boats, Reserves Queries.
+
         System.out.print ("Query: Find the intersection of cola market cola_a and cola market cola_b"
                 + "SELECT c.name, SDO_GEOM.SDO_AREA(c.shape, 0.005)"
                 + " FROM cola_markets c_a, cola_markets c_b"
