@@ -9,6 +9,7 @@ import heap.Tuple;
 import index.IndexScan;
 import iterator.*;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.Vector;
 
@@ -223,7 +224,7 @@ class STSDriver extends TestDriver
         try {
             am  = new FileScan("colamarkets.in", Mtypes, Msizes,
                     (short)3, (short)2,
-                    Mprojection, null);
+                    Mprojection, outFilter);
         }
         catch (Exception e) {
             status = FAIL;
@@ -238,8 +239,9 @@ class STSDriver extends TestDriver
         }
         System.out.println("done");
         try {
+            System.out.println("Name, Area");
             while ((t = am.get_next()) != null) {
-                t.print(jtype);
+                System.out.println(t.getStrFld(1) + ", " + t.getSdogeometryFld(2).area());
             }
         }
         catch (Exception e) {
@@ -263,5 +265,6 @@ class STSDriver extends TestDriver
                 + " the Computer  Sciences Department or the\n"
                 + "developers...\n\n");
     }
+
 }
 
