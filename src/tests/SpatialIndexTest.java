@@ -4,6 +4,7 @@ import btree.BTreeFile;
 import btree.IntegerKey;
 import com.infomatiq.jsi.SpatialIndex;
 import com.infomatiq.jsi.rtree.RTree;
+import com.infomatiq.jsi.Rectangle;
 import global.*;
 import heap.Heapfile;
 import heap.Scan;
@@ -158,12 +159,22 @@ class SpatialIndexDriver extends TestDriver
         }
 
 
-
         if (status != OK) {
             //bail out
             System.err.println("*** Error creation relation for colamarkets");
             Runtime.getRuntime().exit(1);
         }
+
+        Rectangle[] rects = new Rectangle[] {
+            new Rectangle(1.0f,1.0f,2.0f,3.0f),
+                new Rectangle(2.5f, 3.5f,3.5f,4.5f),
+        };
+        si.init(null);
+        for (int i = 0; i < numMarkets; i++) {
+            si.add(rects[i],((ColaMarkets) colamarkets.elementAt(i)).marketId);
+        }
+
+        System.out.println("\n R-Tree \n number of entries in Tree " + si.size());
     }
 
 
