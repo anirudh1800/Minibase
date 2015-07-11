@@ -117,7 +117,7 @@ class SpatialIndexDriver extends TestDriver
 
         SpatialIndex si = new RTree();
         // selecting the tuple into file "colamarkets"
-       
+
         RID rid;
         Heapfile f = null;
         try {
